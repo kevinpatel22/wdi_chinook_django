@@ -1,0 +1,24 @@
+1.  Album.objects.get(title='Vinicius De Moraes')
+    for track in Track.objects.filter(album=243):
+        print(track.name) 
+
+2.  Artist.objects.get(name='Philip Glass Ensemble')
+    for albums in Album.objects.filter(artist=275):
+        print(albums.title)
+
+3.  list = Playlist.objects.get(name='Brazilian Music')
+    for track in list.tracks.all():
+        print(track.name)
+
+4.  Genre.objects.get(name='Jazz')
+    for track in Track.objects.filter(genre=2):
+        print(track.name)
+
+5.  genr = Track.objects.get(name='My Time After Awhile')
+    print(genr.genre.name)
+
+6.  type = Track.objects.get(name='My Time After Awhile')
+    print(type.media_type.name)
+
+7.  albm = Track.objects.get(name='My Time After Awhile')
+    print(albm.album.title)
